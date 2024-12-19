@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://gezzzi.github.io/memo-static-app/static/css/main.42a9ba20.css",
+    "main.js": "https://gezzzi.github.io/memo-static-app/static/js/main.56ba5c47.js",
+    "index.html": "https://gezzzi.github.io/memo-static-app/index.html",
+    "main.42a9ba20.css.map": "https://gezzzi.github.io/memo-static-app/static/css/main.42a9ba20.css.map",
+    "main.56ba5c47.js.map": "https://gezzzi.github.io/memo-static-app/static/js/main.56ba5c47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42a9ba20.css",
+    "static/js/main.56ba5c47.js"
+  ]
+}
