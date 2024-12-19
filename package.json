@@ -2,7 +2,7 @@
   "name": "memo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gezzzi.github.io/memo-app",
+  "homepage": "https://gezzzi.github.io/react_project",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^18.2.0",
