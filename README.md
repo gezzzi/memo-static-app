@@ -12,7 +12,6 @@
 
 - React
 - Tailwind CSS
-- PostCSS
 
 ## インストール方法
 
@@ -38,9 +37,9 @@ npm start
 npm run build
 ```
 
-## ライセンス
+## Demo
 
-MIT
+https://gezzzi.github.io/memo-static-app/
 
 ## 作者
 
