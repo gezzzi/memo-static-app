@@ -13,34 +13,12 @@
 - React
 - Tailwind CSS
 
-## インストール方法
-
-```bash
-# リポジトリのクローン
-git clone [リポジトリURL]
-
-# 依存パッケージのインストール
-npm install
-
-# 開発サーバーの起動
-npm start
-```
-
 ## 開発環境
 
 - Node.js
 - npm
 
-## ビルド方法
-
-```bash
-npm run build
-```
-
 ## Demo
+アプリケーションは以下のURLで公開しています：
 
 https://gezzzi.github.io/memo-static-app/
-
-## 作者
-
-gezzzi
