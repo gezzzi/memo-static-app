@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import ConfirmDialog from './components/ConfirmDialog';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   const [input, setInput] = useState('');
   const [editingId, setEditingId] = useState(null);
   const [editText, setEditText] = useState('');
+  const [deleteConfirmId, setDeleteConfirmId] = useState(null);
 
   // メモが更新されたらローカルストレージに保存
   useEffect(() => {
@@ -66,9 +68,14 @@ function App() {
     setEditText('');
   };
 
-  const deleteMemo = (id) => {
-    if (window.confirm('このメモを削除してもよろしいですか？')) {
-      setMemos(memos.filter(memo => memo.id !== id));
+  const handleDeleteClick = (id) => {
+    setDeleteConfirmId(id);
+  };
+
+  const confirmDelete = () => {
+    if (deleteConfirmId) {
+      setMemos(memos.filter(memo => memo.id !== deleteConfirmId));
+      setDeleteConfirmId(null);
     }
   };
 
@@ -151,7 +158,7 @@ function App() {
                           編集
                         </button>
                         <button
-                          onClick={() => deleteMemo(memo.id)}
+                          onClick={() => handleDeleteClick(memo.id)}
                           className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
                         >
                           削除
@@ -169,6 +176,13 @@ function App() {
             ))}
           </TransitionGroup>
         </div>
+
+        <ConfirmDialog
+          isOpen={deleteConfirmId !== null}
+          message="このメモを削除してもよろしいですか？"
+          onConfirm={confirmDelete}
+          onCancel={() => setDeleteConfirmId(null)}
+        />
       </div>
     </div>
   );
